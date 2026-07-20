@@ -4,6 +4,7 @@ import {
   FaPhoneAlt,
   FaMapMarkerAlt,
   FaClock,
+  FaEnvelope,
 } from "react-icons/fa";
 
 export default function Contact() {
@@ -36,6 +37,7 @@ export default function Contact() {
           <div className="grid md:grid-cols-2 gap-10 mt-14">
             {/* Left */}
             <div className="space-y-7">
+              {/* Address */}
               <div className="flex items-start gap-4">
                 <div className="bg-yellow-400/10 p-4 rounded-xl text-yellow-400 text-xl">
                   <FaMapMarkerAlt />
@@ -51,6 +53,7 @@ export default function Contact() {
                 </div>
               </div>
 
+              {/* Phone */}
               <div className="flex items-start gap-4">
                 <div className="bg-yellow-400/10 p-4 rounded-xl text-yellow-400 text-xl">
                   <FaPhoneAlt />
@@ -58,10 +61,14 @@ export default function Contact() {
 
                 <div>
                   <h3 className="text-white font-bold text-lg">Phone</h3>
-                  <p className="text-gray-300">+91 9422 148518</p>
+                  <p className="text-gray-300">+91 9595654444,
+                    +91 9730644141
+
+                  </p>
                 </div>
               </div>
 
+              {/* WhatsApp */}
               <div className="flex items-start gap-4">
                 <div className="bg-yellow-400/10 p-4 rounded-xl text-yellow-400 text-xl">
                   <FaWhatsapp />
@@ -75,6 +82,24 @@ export default function Contact() {
                 </div>
               </div>
 
+              {/* Email */}
+              <div className="flex items-start gap-4">
+                <div className="bg-yellow-400/10 p-4 rounded-xl text-yellow-400 text-xl">
+                  <FaEnvelope />
+                </div>
+
+                <div>
+                  <h3 className="text-white font-bold text-lg">Email</h3>
+                  <a
+                    href="mailto:yourgmail@gmail.com"
+                    className="text-gray-300 hover:text-yellow-400 transition"
+                  >
+                    Solsecrackersrashin@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              {/* Business Hours */}
               <div className="flex items-start gap-4">
                 <div className="bg-yellow-400/10 p-4 rounded-xl text-yellow-400 text-xl">
                   <FaClock />
@@ -106,8 +131,7 @@ export default function Contact() {
                 </p>
 
                 <a
-                  href="https://wa.me/919422148518
-                  "
+                  href="https://wa.me/919422148518"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white font-bold text-lg px-10 py-5 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(34,197,94,0.35)]"
