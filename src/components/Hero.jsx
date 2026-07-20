@@ -1,22 +1,41 @@
 import { motion } from "framer-motion";
 import heroBackground from "../assets/hero-background.png";
+import heroMobile from "../assets/hero-mobile.png";
+
 
 export default function Hero() {
   return (
     <section
-      id="home"
-      className="min-h-screen flex items-start justify-center pt-24"
-      style={{
-        backgroundImage: `url(${heroBackground})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/70"></div>
+  id="home"
+  className="relative min-h-screen flex items-start justify-center pt-24 overflow-hidden"
+>
+  {/* Desktop Background */}
+  <div
+    className="absolute inset-0 hidden md:block"
+    style={{
+      backgroundImage: `url(${heroBackground})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    }}
+  />
 
-      {/* Content */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 text-center pt-20">
+  {/* Mobile Background */}
+  <div
+    className="absolute inset-0 md:hidden"
+    style={{
+      backgroundImage: `url(${heroMobile})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+    }}
+  />
+
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/55"></div>
+
+  {/* Content */}
+  <div className="relative z-10 w-full max-w-5xl mx-auto px-6 text-center pt-20">
 
         <motion.h1
   initial={{ opacity: 0, y: 30 }}
