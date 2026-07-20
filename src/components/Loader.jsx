@@ -63,7 +63,7 @@ export default function Loader() {
           className="absolute top-1/2 h-5 w-5 -translate-y-1/2 rounded-full bg-yellow-300 blur-sm"
           initial={{ left: "-5%" }}
           animate={{ left: "100%" }}
-          transition={{ duration: 2.5 }}
+          transition={{ duration: 2.0 }}
         />
       </div>
     </div>

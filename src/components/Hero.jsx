@@ -84,7 +84,7 @@ duration-300"
           </a>
 
           <a
-            href="https://wa.me/919422148518"
+            href="https://wa.me/919595654444"
             target="_blank"
             rel="noopener noreferrer"
             className="w-72 rounded-2xl border-2 border-yellow-400 px-10 py-5 text-lg font-bold text-yellow-400 transition-all duration-300 hover:scale-105

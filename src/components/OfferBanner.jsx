@@ -59,7 +59,7 @@ export default function OfferBanner() {
 
           {/* WhatsApp Button */}
           <a
-            href="https://wa.me/919422148518"
+            href="https://wa.me/919595654444"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-10 inline-flex items-center gap-3 rounded-full bg-[#25D366] px-8 py-4 text-lg font-bold text-white transition-all duration-300 hover:scale-105 hover:bg-[#20ba5a] hover:shadow-[0_0_25px_rgba(37,211,102,0.35)]"

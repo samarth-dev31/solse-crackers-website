@@ -84,14 +84,14 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <FaPhoneAlt className="text-yellow-400" />
                 <span className="text-gray-300">
-                  +91 9422 148518
+                  +91 9595 654444
                 </span>
               </div>
 
               <div className="flex items-center gap-3">
                 <FaWhatsapp className="text-green-500" />
                 <a
-                  href="https://wa.me/919422148518"
+                  href="https://wa.me/919595654444"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-green-400 transition"

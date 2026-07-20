@@ -235,7 +235,7 @@ const [selectedImage, setSelectedImage] = useState(null);
 </button>
 
 <a
-  href="https://wa.me/919422148518"
+  href="https://wa.me/919595654444"
   target="_blank"
   rel="noopener noreferrer"
   className="mt-6 rounded-xl bg-green-500 py-4 text-center font-bold text-white transition-all duration-300 hover:bg-green-600"

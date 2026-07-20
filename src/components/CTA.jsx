@@ -38,7 +38,7 @@ export default function CTA() {
 
           <div className="mt-12 flex flex-col sm:flex-row justify-center gap-6">
             <a
-  href="https://wa.me/919422148518
+  href="https://wa.me/9595654444
   "
   target="_blank"
   rel="noopener noreferrer"

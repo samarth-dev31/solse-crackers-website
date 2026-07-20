@@ -148,7 +148,7 @@ export default function Gallery() {
                 </h3>
 
                 <a
-                  href={`https://wa.me/919422148518?text=${encodeURIComponent(
+                  href={`https://wa.me/919595654444?text=${encodeURIComponent(
                     `Hello Solse Crackers! I would like to know more about ${product.name}.`
                   )}`}
                   target="_blank"
