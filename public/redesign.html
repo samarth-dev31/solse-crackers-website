@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Solse Crackers | Luxury Festive Storefront</title>
+  <!-- Google Fonts & Tailwind CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --gold: #FACC15;
+      --amber: #F59E0B;
+    }
+    body {
+      background-color: #050507;
+      color: #FAFAFA;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      -webkit-tap-highlight-color: transparent;
+    }
+    h1, h2, h3, .font-display {
+      font-family: 'Outfit', sans-serif;
+    }
+    /* Animated Gold Shimmer Text */
+    .text-gold-shimmer {
+      background: linear-gradient(110deg, #FDE047 15%, #F59E0B 45%, #FFFBEB 55%, #FACC15 85%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 4s linear infinite;
+    }
+    @keyframes shimmer {
+      to { background-position: 200% center; }
+    }
+    /* Luxury Glassmorphism */
+    .glass-nav {
+      background: rgba(8, 8, 12, 0.82);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(250, 204, 21, 0.14);
+    }
+    .glass-card {
+      background: linear-gradient(165deg, rgba(26, 23, 15, 0.75) 0%, rgba(12, 12, 16, 0.95) 100%);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(250, 204, 21, 0.18);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.85), inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(250, 204, 21, 0.55);
+      box-shadow: 0 24px 48px -12px rgba(250, 204, 21, 0.18);
+    }
+    .gold-btn-glow {
+      background: linear-gradient(135deg, #FDE047 0%, #F59E0B 100%);
+      box-shadow: 0 0 25px rgba(250, 204, 21, 0.4);
+    }
+    .wa-btn-glow {
+      background: linear-gradient(135deg, #22C55E 0%, #16A34A 100%);
+      box-shadow: 0 0 25px rgba(34, 197, 94, 0.35);
+    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    #sparksCanvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+  </style>
+</head>
+<body class="pb-32 selection:bg-yellow-400 selection:text-black">
+
+  <!-- Live Floating Golden Sparks Canvas -->
+  <canvas id="sparksCanvas"></canvas>
+
+  <!-- Ambient Top Spotlight -->
+  <div class="fixed top-[-150px] left-1/2 -translate-x-1/2 w-[550px] h-[380px] bg-amber-500/15 rounded-full blur-[130px] pointer-events-none z-0"></div>
+
+  <!-- Sticky Luxury Navbar -->
+  <header class="sticky top-0 z-50 glass-nav">
+    <div class="max-w-6xl mx-auto px-4 py-3.5 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-yellow-400/20 to-amber-600/10 border border-yellow-400/40 flex items-center justify-center shadow-lg shadow-yellow-500/10">
+          <i data-lucide="sparkles" class="w-5 h-5 text-yellow-400"></i>
+        </div>
+        <div>
+          <span class="font-display font-extrabold text-lg tracking-tight text-white block leading-none">SOLSE <span class="text-yellow-400">CRACKERS</span></span>
+          <span class="text-[10px] uppercase tracking-[0.22em] text-zinc-400 font-semibold block mt-1">Premium Fireworks</span>
+        </div>
+      </a>
+      <a href="https://wa.me/919595654444" target="_blank" class="wa-btn-glow text-white font-bold text-xs px-3.5 py-2.5 rounded-xl flex items-center gap-1.5 active:scale-95 transition">
+        <i data-lucide="message-circle" class="w-4 h-4"></i>
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="relative z-10 max-w-6xl mx-auto px-4">
+
+    <!-- Hero Section -->
+    <section class="pt-8 pb-10 text-center">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-yellow-400/10 border border-yellow-400/30 text-yellow-300 text-xs font-bold tracking-wide mb-5 shadow-inner">
+        <span class="w-2 h-2 rounded-full bg-yellow-400 animate-ping"></span>
+        DIWALI MEGA WHOLESALE & RETAIL 2026
+      </div>
+
+      <h1 class="font-display font-black text-4xl sm:text-6xl leading-[1.08] tracking-tight mb-4">
+        Celebrate Every<br />
+        Festival with <span class="text-gold-shimmer">Pure Light</span>
+      </h1>
+
+      <p class="text-zinc-400 text-sm sm:text-base max-w-xl mx-auto mb-7 leading-relaxed">
+        Direct factory-grade fireworks at wholesale rates. Safe, vibrant, and unforgettable celebrations for families, weddings, and grand events.
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-3 max-w-md mx-auto mb-8">
+        <a href="#catalog" class="gold-btn-glow text-black font-display font-extrabold text-sm py-3.5 px-6 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition">
+          <span>Explore Interactive Catalog</span>
+          <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
+        </a>
+        <a href="https://wa.me/919595654444?text=Hi%20Solse%20Crackers,%20please%20share%20your%20latest%20Diwali%20price%20list" target="_blank" class="bg-zinc-900/90 hover:bg-zinc-800 text-white border border-yellow-400/30 font-bold text-sm py-3.5 px-6 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition">
+          <i data-lucide="phone-call" class="w-4 h-4 text-yellow-400"></i>
+          <span>Instant Bulk Quote</span>
+        </a>
+      </div>
+
+      <!-- 3 Compact Luxury Trust Pills -->
+      <div class="grid grid-cols-3 gap-2 max-w-lg mx-auto">
+        <div class="glass-card rounded-xl py-2.5 px-2 flex flex-col items-center justify-center">
+          <i data-lucide="award" class="w-4 h-4 text-yellow-400 mb-1"></i>
+          <span class="text-[11px] font-bold text-zinc-200">Top Quality</span>
+        </div>
+        <div class="glass-card rounded-xl py-2.5 px-2 flex flex-col items-center justify-center">
+          <i data-lucide="Flame" class="w-4 h-4 text-amber-400 mb-1"></i>
+          <span class="text-[11px] font-bold text-zinc-200">Wholesale</span>
+        </div>
+        <div class="glass-card rounded-xl py-2.5 px-2 flex flex-col items-center justify-center">
+          <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400 mb-1"></i>
+          <span class="text-[11px] font-bold text-zinc-200">Green Certified</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Catalog Section -->
+    <section id="catalog" class="pt-4 pb-12">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-5 gap-3">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-[0.2em] text-yellow-400 block mb-1">Live Estimator</span>
+          <h2 class="font-display font-black text-2xl sm:text-3xl">Our Premium Collection</h2>
+        </div>
+
+        <!-- Search Input -->
+        <div class="relative w-full sm:w-72">
+          <i data-lucide="search" class="w-4 h-4 text-zinc-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Search crackers, sky shots, combos..."
+            oninput="renderCatalog()"
+            class="w-full bg-zinc-900/90 border border-zinc-800 focus:border-yellow-400/60 rounded-xl pl-10 pr-4 py-2.5 text-sm text-white placeholder-zinc-500 outline-none transition"
+          />
+        </div>
+      </div>
+
+      <!-- Single-Row Swipeable Category Pills -->
+      <div id="categoryRow" class="flex gap-2 overflow-x-auto no-scrollbar pb-4 mb-4"></div>
+
+      <!-- Product Grid -->
+      <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+
+    <!-- Verified Store & Contact Card -->
+    <section class="py-8">
+      <div class="glass-card rounded-3xl p-6 sm:p-8 relative overflow-hidden">
+        <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-yellow-400/10 rounded-full blur-2xl pointer-events-none"></div>
+        <span class="text-xs font-extrabold uppercase tracking-[0.2em] text-yellow-400 block mb-1">Visit Or Order Direct</span>
+        <h3 class="font-display font-black text-2xl mb-5">Solse Crackers — Official Store</h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+          <div class="bg-black/40 border border-white/5 rounded-2xl p-4 flex items-start gap-3">
+            <i data-lucide="map-pin" class="w-5 h-5 text-yellow-400 shrink-0 mt-0.5"></i>
+            <div>
+              <span class="text-xs text-zinc-400 block">Store Address</span>
+              <strong class="text-zinc-100 font-semibold">Rashin, Karjat Taluka, Ahilyanagar, Maharashtra</strong>
+            </div>
+          </div>
+          <div class="bg-black/40 border border-white/5 rounded-2xl p-4 flex items-start gap-3">
+            <i data-lucide="phone" class="w-5 h-5 text-yellow-400 shrink-0 mt-0.5"></i>
+            <div>
+              <span class="text-xs text-zinc-400 block">Direct Booking</span>
+              <strong class="text-zinc-100 font-semibold">+91 95956 54444<br/>+91 97306 44141</strong>
+            </div>
+          </div>
+          <div class="bg-black/40 border border-white/5 rounded-2xl p-4 flex items-start gap-3">
+            <i data-lucide="mail" class="w-5 h-5 text-yellow-400 shrink-0 mt-0.5"></i>
+            <div>
+              <span class="text-xs text-zinc-400 block">Email Desk</span>
+              <strong class="text-zinc-100 font-semibold break-all">solsecrackersrashin@gmail.com</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 pt-5 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-zinc-500">
+          <p>© 2026 Solse Crackers. All rights reserved.</p>
+          <p class="text-zinc-400">Crafted by <span class="text-yellow-400 font-bold">Nebula Studio</span></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Glassmorphic Bottom Checkout Bar -->
+  <div id="stickyCart" class="fixed bottom-4 left-1/2 -translate-x-1/2 w-[calc(100%-1.5rem)] max-w-lg z-50 transition-all duration-300">
+    <div class="bg-zinc-950/95 backdrop-blur-2xl border border-yellow-400/50 rounded-2xl p-3.5 shadow-[0_20px_50px_rgba(0,0,0,0.95)] flex items-center justify-between gap-3">
+      <div class="pl-1">
+        <div class="flex items-center gap-2">
+          <span id="cartBadge" class="bg-yellow-400 text-black font-extrabold text-[11px] px-2 py-0.5 rounded-md">1 ITEM</span>
+          <span class="text-xs text-zinc-400">Estimated Total</span>
+        </div>
+        <div class="flex items-baseline gap-2 mt-0.5">
+          <span id="cartTotal" class="font-display font-black text-xl text-yellow-400">₹1,499</span>
+          <span id="cartSaved" class="text-[11px] text-emerald-400 font-semibold">You save ₹1,500</span>
+        </div>
+      </div>
+      <button onclick="sendWhatsAppOrder()" class="wa-btn-glow text-white font-display font-bold text-sm px-5 py-3.5 rounded-xl flex items-center gap-2 active:scale-95 transition shrink-0">
+        <span>Order on WhatsApp</span>
+        <i data-lucide="send" class="w-4 h-4"></i>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const WHATSAPP_NUMBER = "919595654444";
+
+    // Uses your existing project images first, with high-res firework fallbacks
+    const products = [
+      {
+        id: 1,
+        name: "Mega Celebration Pack",
+        cat: "PREMIUM",
+        badgeColor: "from-amber-400 to-yellow-500 text-black",
+        price: 1499,
+        mrp: 2999,
+        shots: "40+ Items",
+        desc: "Grand family combo box with sky rockets, multi-shot cakes, sparklers, flower pots & chakkars.",
+        img: "/mega-celebration-pack.png",
+        fallback: "https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: 2,
+        name: "Multi Shot Cake (25 Shots)",
+        cat: "BEST SELLER",
+        badgeColor: "from-red-500 to-rose-600 text-white",
+        price: 650,
+        mrp: 1200,
+        shots: "25 Sky Bursts",
+        desc: "Continuous 25-shot aerial repeater delivering golden palms and crackling multi-colour stars.",
+        img: "/multi-shot-cake.png",
+        fallback: "https://images.unsplash.com/photo-1498931299472-f7a63a5a1cfa?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: 3,
+        name: "Colour Sparklers (10 Box)",
+        cat: "KIDS SAFE",
+        badgeColor: "from-pink-500 to-purple-600 text-white",
+        price: 180,
+        mrp: 350,
+        shots: "Low Smoke",
+        desc: " smokeless neon-glow sparklers with zero ash drop—perfect for kids and family photos.",
+        img: "/colour-sparklers.png",
+        fallback: "https://images.unsplash.com/photo-1531747118685-ca8fa6e08806?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: 4,
+        name: "Twinkling Stars Deluxe",
+        cat: "FAMILY",
+        badgeColor: "from-purple-500 to-indigo-600 text-white",
+        price: 150,
+        mrp: 280,
+        shots: "10 Pieces",
+        desc: "Bright golden crackling star fountains producing rich festive light effects.",
+        img: "/twinkling-stars.png",
+        fallback: "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: 5,
+        name: "Festival Sky Rocket",
+        cat: "AERIAL",
+        badgeColor: "from-orange-500 to-red-600 text-white",
+        price: 320,
+        mrp: 600,
+        shots: "High Altitude",
+        desc: "Supersonic whistling tail rockets bursting into high-altitude chrysanthemum rings.",
+        img: "/festival-rocket.png",
+        fallback: "https://images.unsplash.com/photo-1467810563316-b5476525c0f9?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: 6,
+        name: "Ground Chakkars Special",
+        cat: "POPULAR",
+        badgeColor: "from-blue-500 to-cyan-500 text-white",
+        price: 220,
+        mrp: 400,
+        shots: "10 Spinners",
+        desc: "High-speed ground spinners creating neon green, gold, and crimson rings.",
+        img: "/ground-chakkars.png",
+        fallback: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=800&q=80"
+      }
+    ];
+
+    const categories = ["ALL", "PREMIUM", "BEST SELLER", "KIDS SAFE", "FAMILY", "AERIAL", "POPULAR"];
+    let activeCategory = "ALL";
+    const cart = { 1: 1 };
+
+    function renderCategories() {
+      const row = document.getElementById("categoryRow");
+      row.innerHTML = categories.map(cat => {
+        const isActive = cat === activeCategory;
+        return `
+          <button
+            onclick="setCategory('${cat}')"
+            class="shrink-0 px-4 py-2 rounded-full font-display font-bold text-xs tracking-wider uppercase transition-all ${
+              isActive
+                ? 'gold-btn-glow text-black scale-105'
+                : 'bg-zinc-900/90 text-zinc-400 border border-white/10 hover:text-white'
+            }"
+          >
+            ${cat}
+          </button>
+        `;
+      }).join("");
+    }
+
+    function renderCatalog() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const grid = document.getElementById("productGrid");
+
+      const filtered = products.filter(p => {
+        const matchesCat = activeCategory === "ALL" || p.cat === activeCategory;
+        const matchesQuery = p.name.toLowerCase().includes(query) || p.desc.toLowerCase().includes(query);
+        return matchesCat && matchesQuery;
+      });
+
+      grid.innerHTML = filtered.map(p => {
+        const qty = cart[p.id] || 0;
+        const discount = Math.round(((p.mrp - p.price) / p.mrp) * 100);
+        return `
+          <div class="glass-card rounded-3xl overflow-hidden flex flex-col">
+            <!-- Product Visual Header -->
+            <div class="relative h-56 bg-gradient-to-b from-amber-950/40 via-zinc-950 to-zinc-950 flex items-center justify-center p-4 overflow-hidden group">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(250,204,21,0.18),transparent_70%)]"></div>
+              <img
+                src="${p.img}"
+                onerror="this.onerror=null; this.src='${p.fallback}';"
+                alt="${p.name}"
+                class="w-full h-full object-contain rounded-xl relative z-10 group-hover:scale-105 transition duration-500"
+              />
+              <span class="absolute top-3.5 left-3.5 z-20 bg-gradient-to-r ${p.badgeColor} font-display font-extrabold text-[10px] tracking-wider uppercase px-2.5 py-1 rounded-lg shadow-lg">
+                ${p.cat}
+              </span>
+              <span class="absolute top-3.5 right-3.5 z-20 bg-emerald-500/20 border border-emerald-400/40 text-emerald-300 font-bold text-[11px] px-2.5 py-0.5 rounded-lg backdrop-blur-md">
+                ${discount}% OFF
+              </span>
+              <span class="absolute bottom-3 right-3.5 z-20 bg-black/70 border border-white/10 text-zinc-300 text-[10px] font-semibold px-2.5 py-0.5 rounded-full">
+                ✨ ${p.shots}
+              </span>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-5 flex-1 flex flex-col">
+              <h3 class="font-display font-bold text-lg text-white mb-1">${p.name}</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed mb-4 flex-1">${p.desc}</p>
+
+              <!-- Price + Interactive Stepper -->
+              <div class="pt-3.5 border-t border-white/10 flex items-center justify-between">
+                <div>
+                  <span class="text-[10px] uppercase tracking-wider text-zinc-500 block">Festive Price</span>
+                  <div class="flex items-baseline gap-1.5">
+                    <span class="font-display font-black text-2xl text-yellow-400">₹${p.price}</span>
+                    <span class="text-xs text-zinc-500 line-through">₹${p.mrp}</span>
+                  </div>
+                </div>
+
+                ${
+                  qty === 0
+                    ? `<button onclick="updateQty(${p.id}, 1)" class="gold-btn-glow text-black font-display font-extrabold text-xs px-4 py-2.5 rounded-xl flex items-center gap-1.5 active:scale-95 transition">
+                        <span>ADD</span>
+                        <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+                      </button>`
+                    : `<div class="flex items-center gap-2 bg-zinc-900 border border-yellow-400/40 rounded-xl p-1">
+                        <button onclick="updateQty(${p.id}, -1)" class="w-8 h-8 rounded-lg bg-zinc-800 text-white font-bold flex items-center justify-center active:scale-90">−</button>
+                        <span class="font-display font-extrabold text-sm w-6 text-center text-yellow-400">${qty}</span>
+                        <button onclick="updateQty(${p.id}, 1)" class="w-8 h-8 rounded-lg bg-yellow-400 text-black font-extrabold flex items-center justify-center active:scale-90">+</button>
+                      </div>`
+                }
+              </div>
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      lucide.createIcons();
+      updateStickyBar();
+    }
+
+    function setCategory(cat) {
+      activeCategory = cat;
+      renderCategories();
+      renderCatalog();
+    }
+
+    function updateQty(id, delta) {
+      cart[id] = Math.max(0, (cart[id] || 0) + delta);
+      if (cart[id] === 0) delete cart[id];
+      renderCatalog();
+    
